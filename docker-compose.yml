@@ -5,7 +5,7 @@ services:
     build: ./backend
     container_name: ml_backend_container
     ports:
-      - "8765:8000"
+      - "8000:8000"  # ปรับเป็น 8000 มาตรฐาน
     volumes:
       - ./backend:/app
     environment:
@@ -15,7 +15,7 @@ services:
     build: ./frontend
     container_name: web_frontend_container
     ports:
-      - "8502:8501"
+      - "8501:8501"  # ปรับเป็น 8501 มาตรฐานของ Streamlit
     volumes:
       - ./frontend:/app
     depends_on:
